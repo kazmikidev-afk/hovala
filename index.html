@@ -772,6 +772,7 @@ function renderQuestion(q,box,opts={}){
       const ok2=document.createElement("button");ok2.className="btn-line";ok2.textContent="❌ טעיתי / פספסתי";
       ok1.onclick=()=>{row.remove();finish(true,true);};
       ok2.onclick=()=>{row.remove();finish(false,true);};
+      row.append(ok1,ok2);
       card.appendChild(row);
     };
     actions.appendChild(bModel);addHintBtn();
